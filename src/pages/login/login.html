@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <h1>Ionic 3 LinkedIn Authentication</h1>
+
+    <h3 *ngIf="isLoggedIn===true">
+      <ul>
+        <li>ID: {{selfData.id}}</li>
+        <li>First Name: {{selfData.firstName}}</li>
+        <li>Last Name: {{selfData.lastName}}</li>
+      </ul>
+      <br>
+      <button ion-button round outline (click)="shareSomething()">Share to&nbsp;<ion-icon name="logo-linkedin"></ion-icon></button>
+      <br>
+      <button ion-button round outline (click)="logout()">Logout from&nbsp;<ion-icon name="logo-linkedin"></ion-icon></button>
+    </h3>
+    <h3 *ngIf="isLoggedIn!==true">
+      <button ion-button round outline (click)="login()">Login with&nbsp;<ion-icon name="logo-linkedin"></ion-icon></button>
+    </h3>
+</ion-content>
