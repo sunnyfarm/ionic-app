@@ -12,6 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LinkedIn } from '@ionic-native/linkedin';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Toast } from '@ionic-native/toast';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { LinkedIn } from '@ionic-native/linkedin';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LinkedIn
+    LinkedIn,
+    BarcodeScanner,
+    Toast
   ]
 })
 export class AppModule {}
